@@ -16,12 +16,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full w-full">
-      <body
-        className={`${poppins.variable}  antialiased relative h-full w-full`}
-      >
+    <html lang="en">
+      <body>
         <Navbar />
-        {children}
+        <main className={`${poppins.variable} font-poppins`}>{children}</main>
         <Footer />
       </body>
     </html>
