@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ReactLenis } from "lenis/react";
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
