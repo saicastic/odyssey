@@ -1,0 +1,52 @@
+.navheader {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  padding-top: 1rem;
+}
+
+.navMobile {
+  width: 92%;
+  height: 4vh;
+  border-radius: 0.3rem;
+  background-color: rebeccapurple;
+  margin-inline: auto;
+}
+
+.navDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navMobile {
+    display: none;
+  }
+  .navDesktop {
+    display: block;
+    width: 90%;
+    border-radius: 0.6rem;
+    background-color: black;
+    color: white;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+  }
+
+  .navDesktop .navLeft {
+  }
+
+  .navDesktop .navMiddle {
+  }
+
+  .navDesktop .navMiddle ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .navDesktop .navRight {
+  }
+}
