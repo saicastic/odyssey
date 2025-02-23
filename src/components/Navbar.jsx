@@ -27,16 +27,19 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`${styles.navheader}`}>
+    <header className={`${styles.navheader} `}>
       <nav className={`${styles.navMobile}`}></nav>
-      <nav className={`${styles.navDesktop} container`}>
-        <div className={`${styles.navLeft}`}>
+      <nav className={`${styles.navDesktop} container ${styles.glowingBorder}`}>
+      <div className={`${styles.navDesktopInner}`}>
+        
+      <div className={`${styles.navLeft}`}>
           <Link href="/">
             <div className="logo" ref={linkRef}>
               Odyssey
             </div>
           </Link>
         </div>
+    
         <div className={`${styles.navMiddle}`}>
           <ul>
             <li>
@@ -56,6 +59,7 @@ export default function Navbar() {
         <div className={`${styles.navRight}`}>
           <button>Register</button>
         </div>
+      </div>
       </nav>
     </header>
   );
