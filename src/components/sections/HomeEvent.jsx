@@ -1,7 +1,22 @@
+"use client";
+
+import { useEffect, useReducer } from "react";
+import HomeEventCard from "../snippets/HomeEventCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const HomeEvent = () => {
   return (
-    <section>
-      <h1>HomeEvent</h1>
+    <section className="EventSec">
+      {[...Array(4)].map((_, index) => (
+        <HomeEventCard
+          key={index}
+          id={`card-${index + 1}`}
+          frontSrc="/watergranny.jpg"
+          frontAlt="Card Image"
+          backText="Your card Details Appear here"
+        />
+      ))}
     </section>
   );
 };
