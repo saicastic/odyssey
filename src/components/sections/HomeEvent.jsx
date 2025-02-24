@@ -13,7 +13,7 @@ const HomeEvent = forwardRef(({}, ref) => {
         <HomeEventCard
           key={index}
           id={`card-${index + 1}`}
-          frontSrc="/watergranny.jpg"
+          frontSrc="/amity_logo.png"
           frontAlt="Card Image"
           backText="Your card Details Appear here"
           ref={(el) => (ref.current[index] = el)}

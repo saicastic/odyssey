@@ -8,16 +8,49 @@ const HomeEventCard = forwardRef(
         <div className="cardWrapper">
           <div className="flipCardInner">
             <div className="flipCardFront">
-              <Image
-                priority
-                src={frontSrc}
-                width={500}
-                height={500}
-                alt={frontAlt}
-              />
+              <div className="flipCardFrontInner shine-overlay">
+                <div className="flipCardFrontBorder">
+                  <div className="leftCornerImage">
+                    <Image
+                      src={"/flowerone.svg"}
+                      width={50}
+                      height={50}
+                      alt="flower svg"
+                    />
+                  </div>
+                  <div className="shine" />
+                  <div className="rightCornerImage">
+                    <Image
+                      src={"/flowerone.svg"}
+                      width={50}
+                      height={50}
+                      alt="flower svg"
+                    />
+                  </div>
+                  <div className="middleLogo">
+                    <Image
+                      priority
+                      src={frontSrc}
+                      width={50}
+                      height={50}
+                      alt={frontAlt}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="flipCardBack">
-              <p>{backText}</p>
+              <div className="flipCardBackInner">
+                <div className="flipCardBackImage">
+                  <Image
+                    src={"/shrine.jpg"}
+                    width={100}
+                    height={100}
+                    alt="shrine"
+                  />
+                </div>
+                <div className="flipCardBackOverlay" />
+              </div>
             </div>
           </div>
         </div>

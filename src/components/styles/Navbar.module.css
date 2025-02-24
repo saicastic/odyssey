@@ -28,7 +28,7 @@
     display: block;
     width: 90%;
     /* border-radius: 0.5rem; */
-    background-color: pink;
+    background-color: rgb(247, 247, 247);
     padding: 0.1rem;
     color: white;
     margin-inline: auto;
@@ -49,7 +49,7 @@
     width: 100%;
     height: 100%;
     /* border-radius: calc(0.5rem - 0.15rem); */
-    background-color: limegreen;
+    background-color: rgb(186, 67, 225);
     margin-inline: auto;
     color: white;
     display: flex;
