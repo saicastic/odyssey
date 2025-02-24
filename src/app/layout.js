@@ -2,7 +2,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ReactLenis } from "lenis/react";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -18,11 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${poppins.variable} font-poppins`}>
         <Navbar />
-        <ReactLenis root>
-          <main className={`${poppins.variable} font-poppins`}>{children}</main>
-        </ReactLenis>
+        {children}
         <Footer />
       </body>
     </html>
