@@ -8,27 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
   const footerRef = useRef(null);
 
-  useEffect(() => {
-    const footer = footerRef.current;
-
-    gsap.fromTo(
-      footer,
-      { opacity: 0, y: 100 }, // Initial state (hidden, pushed down)
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footer,
-          start: "top bottom", // When the top of footer enters the bottom of viewport
-          end: "top center", // Animation completes when the footer is in the center
-          scrub: true, // Smooth animation with scroll
-        },
-      }
-    );
-  }, []);
-
   return (
     <footer
       ref={footerRef}

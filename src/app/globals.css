@@ -11,18 +11,113 @@
 html,
 body {
   width: 100%;
-  height: 100%;
 }
 
 body {
   position: relative;
 }
 
-img,svg{
+img,
+svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: pink;
+}
+
+.EventSec {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+}
+
+.HomeEventCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  aspect-ratio: 9/16;
+  perspective: 1000px;
+}
+
+.HomeEventCard p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  animation: floating 3s infinite ease-in-out;
+}
+
+#card-1 .cardWrapper {
+  animation-delay: 0;
+}
+#card-2 .cardWrapper {
+  animation-delay: 0.2s;
+}
+#card-3 .cardWrapper {
+  animation-delay: 0.4s;
+}
+#card-4 .cardWrapper {
+  animation-delay: 0.6s;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.flipCardBack {
+  padding: 1rem;
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -60%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* container code  */
 
 /* xs */
 @media (min-width: 475px) {
