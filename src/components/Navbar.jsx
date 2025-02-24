@@ -5,6 +5,7 @@ import styles from "./styles/Navbar.module.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import TransitionLink from "./snippets/TransitionLink";
+import Image from "next/image";
 
 export default function Navbar() {
   const linkRef = useRef(null);
@@ -33,11 +34,16 @@ export default function Navbar() {
       <nav className={`${styles.navDesktop} container ${styles.glowingBorder}`}>
         <div className={`${styles.navDesktopInner}`}>
           <div className={`${styles.navLeft}`}>
-            <Link href="/">
+            <TransitionLink href="/">
               <div className="logo" ref={linkRef}>
-                Odyssey
+                <Image
+                  src={"/odyssey_circle_logo.png"}
+                  width={100}
+                  height={100}
+                  alt="navbar logo"
+                />
               </div>
-            </Link>
+            </TransitionLink>
           </div>
 
           <div className={`${styles.navMiddle}`}>
@@ -46,13 +52,13 @@ export default function Navbar() {
                 <TransitionLink href="/events">Events</TransitionLink>
               </li>
               <li>
-                <Link href="/about">About Us</Link>
+                <TransitionLink href="/about">About Us</TransitionLink>
               </li>
               <li>
-                <Link href="/sponsors">Sponsors</Link>
+                <TransitionLink href="/sponsors">Sponsors</TransitionLink>
               </li>
               <li>
-                <Link href="/team">Team</Link>
+                <TransitionLink href="/team">Team</TransitionLink>
               </li>
             </ul>
           </div>

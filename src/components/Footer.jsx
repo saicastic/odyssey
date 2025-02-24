@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="bg-gray-900 text-white w-full  text-center absolute bottom-0"
+      className="bg-gray-900 text-white w-full  text-center absolute bottom-10"
     >
       <h2 className="text-2xl font-semibold">Footer Content</h2>
       <p>Scroll to see the animation!</p>

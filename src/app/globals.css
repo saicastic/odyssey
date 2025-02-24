@@ -33,6 +33,10 @@ section {
   background-color: pink;
 }
 
+.logo {
+  width: 2.5rem;
+}
+
 /* page - transition animation start  */
 
 .pageTransition {
